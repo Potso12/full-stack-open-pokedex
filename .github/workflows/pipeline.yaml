@@ -29,9 +29,9 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
-        severity: error
-        details: Build of application failed
-        webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: error
+          details: Build of application failed
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: E2E tests
         uses: cypress-io/github-action@v5
         with:
